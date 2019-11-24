@@ -1,0 +1,155 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Guessing game",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6Zo3aA0cHZhV",
+        "colab_type": "text"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## **Guessing game between two user's**\n",
+        "\n",
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JtT4J5aCMU4p",
+        "colab_type": "text"
+      },
+      "source": [
+        "**User 1:**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qTRsqV_YJusi",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "c94d0a8e-89e8-44ae-ff9f-32d80896347c"
+      },
+      "source": [
+        "import getpass\n",
+        "\n",
+        "number = int(getpass.getpass('Guess Number:'))"
+      ],
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Guess Number:··········\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ks2IjOwKMhUh",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "601998a2-65a9-4897-bdd0-84087c4a92a9"
+      },
+      "source": [
+        "guess_limit=int(input(\"Enter guess limit: \"))"
+      ],
+      "execution_count": 83,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter guess limit: 3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Zy-liC5FMujA",
+        "colab_type": "text"
+      },
+      "source": [
+        "**User 2: Start Guessing**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1wYGgj-bH_8X",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 84
+        },
+        "outputId": "e6ee3b4a-e5af-4a76-b46d-267f1d73095a"
+      },
+      "source": [
+        "guess_count=0\n",
+        "#guess_limit=3\n",
+        "while guess_count<guess_limit:\n",
+        "  guess = int(input(\"Enter you guess: \"))\n",
+        "  guess_count=guess_count+1\n",
+        "  if guess==number:\n",
+        "    print(\"Congrats you won!\")\n",
+        "    break\n",
+        "else:\n",
+        "    print(f\"You Lost - The correct number was : {number}\")    "
+      ],
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter you guess: 3\n",
+            "Enter you guess: 2\n",
+            "Enter you guess: 1\n",
+            "You Lost : The correct number was : 5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eMF7j5Z8Ikob",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
